@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details | Leena Bahweny</title>
+    <meta
+      name="description"
+      content="Detailed project case study for Leena Bahweny's portfolio."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=detail-prodify-1" />
+  </head>
+  <body class="detail-page">
+    <canvas id="neon-field" aria-hidden="true"></canvas>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Back to home">
+        <span class="brand-mark">LB</span>
+        <span>Leena Bahweny</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Project navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="project-detail-shell">
+      <section class="project-detail-layout reveal">
+        <article class="project-detail-copy">
+          <div class="detail-nav">
+            <a class="back-link" href="index.html#projects">← Back to projects</a>
+          </div>
+          <p class="eyebrow" id="project-category">Project</p>
+          <h1 id="project-title">Project Name</h1>
+          <h2 class="project-detail-subtitle" id="project-subtitle">Project subtitle</h2>
+          <p class="project-detail-description" id="project-description"></p>
+
+          <div class="detail-list" id="project-details"></div>
+
+          <div class="project-tags detail-tags" id="project-tags"></div>
+          <a class="next-project-card" id="next-project-link" href="#">Next project →</a>
+        </article>
+
+        <aside class="project-gallery" aria-label="Project media carousel">
+          <div class="gallery-frame">
+            <div class="gallery-track" id="gallery-track"></div>
+          </div>
+
+          <div class="gallery-controls">
+            <button class="gallery-button" type="button" data-gallery-prev aria-label="Previous media">
+              ←
+            </button>
+            <div class="gallery-dots" id="gallery-dots" aria-label="Media position"></div>
+            <button class="gallery-button" type="button" data-gallery-next aria-label="Next media">
+              →
+            </button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="project-data.js"></script>
+    <script src="script.js"></script>
+    <script src="project.js"></script>
+  </body>
+</html>
