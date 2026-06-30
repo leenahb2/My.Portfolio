@@ -361,6 +361,21 @@ h1 {
   filter: blur(14px);
 }
 
+.is-scrolling *,
+.is-scrolling *::before,
+.is-scrolling *::after {
+  animation-play-state: paused !important;
+}
+
+.is-scrolling .hero-badge,
+.is-scrolling .contact-badge,
+.is-scrolling .project-card,
+.is-scrolling .timeline-item,
+.is-scrolling .experience-detail-card,
+.is-scrolling .gallery-frame {
+  backdrop-filter: none;
+}
+
 h1 span {
   color: rgba(247, 251, 255, 0.56);
 }
@@ -1119,18 +1134,31 @@ h2 {
 .timeline-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 20px;
+}
+
+#hackathons .section-heading {
+  max-width: 860px;
+  margin-bottom: clamp(42px, 6vw, 70px);
+}
+
+#hackathons .section-heading h2 {
+  max-width: 820px;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  line-height: 1.12;
 }
 
 .timeline-item {
   position: relative;
-  min-height: 250px;
-  padding: 24px;
-  text-align: center;
+  min-height: 286px;
+  padding: 26px;
+  text-align: left;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(77, 231, 255, 0.09), rgba(138, 99, 255, 0.055)),
+    rgba(8, 13, 26, 0.58);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
@@ -1145,9 +1173,19 @@ h2 {
   background: linear-gradient(90deg, var(--cyan), var(--blue), var(--violet));
 }
 
+.timeline-head {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
 .timeline-item span {
   display: inline-flex;
-  margin-bottom: 42px;
+  width: fit-content;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
   padding: 8px 11px;
   border: 1px solid rgba(66, 245, 255, 0.28);
   border-radius: 999px;
@@ -1155,6 +1193,26 @@ h2 {
   color: var(--cyan);
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  color: #f7fbff;
+  font-size: clamp(1.18rem, 1.55vw, 1.45rem);
+  line-height: 1.22;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.timeline-item p {
+  max-width: 94%;
+  margin: 0;
+  color: rgba(219, 231, 255, 0.78);
+  font-size: 0.98rem;
+  line-height: 1.78;
+  text-align: left;
 }
 
 .contact-band {
@@ -2169,6 +2227,22 @@ h2 {
   .experience-board,
   .timeline-item {
     padding: 20px 0;
+  }
+
+  #hackathons .timeline-item {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  #hackathons .timeline-head {
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  #hackathons .timeline-item p {
+    max-width: 100%;
+    font-size: 0.94rem;
+    line-height: 1.68;
   }
 
   .experience-head {

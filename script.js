@@ -124,15 +124,13 @@ window.addEventListener("pointermove", event => {
 window.addEventListener(
   "scroll",
   () => {
-    if (compactViewport.matches) return;
-
     isScrolling = true;
     document.body.classList.add("is-scrolling");
     window.clearTimeout(scrollTimer);
     scrollTimer = window.setTimeout(() => {
       isScrolling = false;
       document.body.classList.remove("is-scrolling");
-    }, 140);
+    }, 400);
   },
   { passive: true }
 );
