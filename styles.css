@@ -617,9 +617,35 @@ h1 span {
 }
 
 #experience .section-heading h2 {
-  max-width: 1040px;
-  font-size: clamp(2.25rem, 4vw, 3.6rem);
+  max-width: 840px;
+  font-size: clamp(1.9rem, 3.2vw, 2.9rem);
   line-height: 1.12;
+}
+
+#experience .experience-board {
+  text-align: center;
+}
+
+#experience .experience-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(14px, 2vw, 20px);
+  text-align: center;
+}
+
+#experience .experience-date {
+  order: -1;
+}
+
+#experience .experience-role,
+#experience .experience-company {
+  text-align: center;
+}
+
+#experience .experience-head p:not(.experience-company) {
+  max-width: 860px;
+  text-align: justify;
 }
 
 h2 {
@@ -2216,7 +2242,7 @@ h2 {
 
   #experience .section-heading h2 {
     max-width: 520px;
-    font-size: clamp(2rem, 8vw, 2.75rem);
+    font-size: clamp(1.75rem, 7vw, 2.35rem);
     line-height: 1.13;
   }
 
@@ -2264,6 +2290,7 @@ h2 {
   .experience-head p:not(.experience-company) {
     padding-right: 0;
     padding-left: 0;
+    text-align: left;
   }
 
   .experience-date {
