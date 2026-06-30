@@ -1,6 +1,7 @@
 const canvas = document.querySelector("#neon-field");
 const ctx = canvas.getContext("2d");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const compactViewport = window.matchMedia("(max-width: 900px)");
 let particles = [];
 let pointer = { x: 0.5, y: 0.5 };
 let scrollTimer;
@@ -123,6 +124,8 @@ window.addEventListener("pointermove", event => {
 window.addEventListener(
   "scroll",
   () => {
+    if (compactViewport.matches) return;
+
     isScrolling = true;
     document.body.classList.add("is-scrolling");
     window.clearTimeout(scrollTimer);
