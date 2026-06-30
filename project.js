@@ -17,6 +17,16 @@ document.querySelector("#next-project-link").textContent = `Next: ${nextProject.
 const detailList = document.querySelector("#project-details");
 detailList.innerHTML = project.details.map(item => `<p>${item}</p>`).join("");
 
+const featureBlock = document.querySelector("#project-feature-block");
+const features = document.querySelector("#project-features");
+if (project.features?.length) {
+  featureBlock.hidden = false;
+  features.innerHTML = project.features.map(feature => `<span>${feature}</span>`).join("");
+} else {
+  featureBlock.hidden = true;
+  features.innerHTML = "";
+}
+
 const tags = document.querySelector("#project-tags");
 tags.innerHTML = project.tags.map(tag => `<span>${tag}</span>`).join("");
 

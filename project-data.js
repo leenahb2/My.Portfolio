@@ -26,14 +26,22 @@ const PROJECTS = {
     name: "Costify",
     subtitle: "Product Costing & Inventory Management Web App",
     description:
-      "Costify helps small businesses calculate product costs, manage raw materials, track inventory, and estimate profitable selling prices. The system reduces manual financial errors by combining cost formulas, unit-based material usage, inventory logic, and automated email order capture.",
+      "Costify is a web app designed for small businesses to manage raw materials, calculate accurate product costs, track inventory, and estimate profitable selling prices. I built cost calculation logic based on material quantities and unit-based usage, allowing users to calculate product costs even when inventory and product usage use different measurement units. The app also includes inventory tracking and email automation that extracts order numbers from incoming emails and stores them in the database.",
     details: [
-      "Implemented product costing logic for raw materials, quantities, and unit-based usage.",
-      "Designed inventory tracking flows to support small business production and pricing decisions.",
-      "Added automation that captures order numbers from emails and stores them in the database.",
-      "Focused on a responsive, clean UI that makes financial decisions easier to understand."
+      "Built product costing logic for raw materials, quantities, and unit-based material usage.",
+      "Implemented inventory tracking to help users monitor stock levels and production needs.",
+      "Added email automation to extract order numbers from emails and save them into the database.",
+      "Designed a responsive interface that simplifies pricing, costing, and inventory decisions for small businesses."
     ],
-    tags: ["Web App", "Inventory", "Cost Logic", "Email Automation", "Database", "Responsive UI"],
+    features: [
+      "Raw material management",
+      "Product cost calculator",
+      "Unit conversion logic",
+      "Inventory tracking",
+      "Email order automation",
+      "Database integration"
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Email Automation"],
     visuals: [
       { label: "Pricing Workspace", type: "dashboard", accent: "blue" },
       { label: "Inventory Tracker", type: "table", accent: "cyan" },
