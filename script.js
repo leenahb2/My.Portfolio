@@ -25,7 +25,7 @@ function resizeCanvas() {
     vx: (Math.random() - 0.5) * 0.24,
     vy: (Math.random() - 0.5) * 0.24,
     r: Math.random() * 1.4 + 0.55,
-    hue: Math.random() > 0.52 ? 190 : 252
+    hue: Math.random() > 0.52 ? 268 : 348
   }));
 }
 
@@ -77,7 +77,7 @@ function drawField(timestamp = 0) {
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
-        ctx.strokeStyle = `rgba(66, 245, 255, ${0.14 - distance / 1100})`;
+        ctx.strokeStyle = `rgba(200, 145, 220, ${0.14 - distance / 1100})`;
         ctx.stroke();
       }
     }

@@ -11,8 +11,10 @@ document.querySelector("#project-category").textContent = `${project.index} / ${
 document.querySelector("#project-title").textContent = project.name;
 document.querySelector("#project-subtitle").textContent = project.subtitle;
 document.querySelector("#project-description").textContent = project.description;
-document.querySelector("#next-project-link").href = `project.html?id=${nextProjectId}`;
-document.querySelector("#next-project-link").textContent = `Next: ${nextProject.name} →`;
+document.querySelectorAll("#next-project-link, #next-project-link-mobile").forEach(link => {
+  link.href = `project.html?id=${nextProjectId}`;
+  link.textContent = `Next: ${nextProject.name} →`;
+});
 
 const detailList = document.querySelector("#project-details");
 detailList.innerHTML = project.details.map(item => `<p>${item}</p>`).join("");
